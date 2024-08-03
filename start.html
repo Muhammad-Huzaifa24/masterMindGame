@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mastermind</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    style="
+      background: url(./images/bg-8.jpg) no-repeat center center/cover;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      max-width: 1390px;
+      min-width: 640px;
+      margin: 0 auto;
+    "
+  >
+    <div style="display: flex; justify-content: center; flex-wrap: wrap">
+      <a class="back-btn" href="./index.html">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="black"
+          class="size-6 hover-active"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
+          />
+        </svg>
+      </a>
+      <div class="main">
+        <div class="answer"></div>
+        <div class="container">
+          <!-- Rows will be generated dynamically -->
+        </div>
+        <div class="button" id="checkButton">Check</div>
+      </div>
+      <div class="color-palette">
+        <div
+          class="colors"
+          style="background-color: red"
+          data-color="red"
+        ></div>
+        <div
+          class="colors"
+          style="background-color: green"
+          data-color="green"
+        ></div>
+        <div
+          class="colors"
+          style="background-color: blue"
+          data-color="blue"
+        ></div>
+        <div
+          class="colors"
+          style="background-color: orange"
+          data-color="orange"
+        ></div>
+        <div
+          class="colors"
+          style="background-color: cyan"
+          data-color="cyan"
+        ></div>
+        <div
+          class="colors"
+          style="background-color: purple"
+          data-color="purple"
+        ></div>
+        <div
+          class="colors"
+          style="background-color: brown"
+          data-color="brown"
+        ></div>
+        <div
+          class="colors"
+          style="background-color: white"
+          data-color="white"
+        ></div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

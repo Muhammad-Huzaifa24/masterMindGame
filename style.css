@@ -1,0 +1,278 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* 
+##################################
+
+      Start game page styling 
+
+##################################
+*/
+
+.main {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.container {
+  border: 1px solid rgb(255, 255, 255);
+  width: 100%;
+  height: 500px;
+  border-radius: 5px;
+  /* background-color: #7b68ee; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 5px;
+}
+.sub-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.answer {
+  border: 1px solid rgb(255, 255, 255);
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container .left {
+  border-bottom: 1px solid red;
+
+  height: 40px;
+
+  width: 75%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.circle-l {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .right {
+  border-bottom: 1px solid green;
+  padding-bottom: 5px;
+  height: 40px;
+
+  width: 18%;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .right .circle-r {
+  border: 1px solid white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.button {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background-color: blue;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bolder;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+.button:hover {
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+}
+.color-palette {
+  height: 250px;
+  width: 130px;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 50px;
+  margin-left: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+.colors {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.disabled {
+  pointer-events: none;
+  border-color: red;
+}
+
+.active {
+  border-color: white;
+}
+.done {
+  border: none;
+}
+.back-btn {
+  color: black;
+  height: fit-content;
+  width: 60px;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: fixed;
+  top: 6%;
+  left: 5%;
+}
+.back-btn:hover {
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid white;
+}
+.back-btn svg:hover {
+  stroke: white;
+}
+
+/* 
+##################################
+
+      Index page styling 
+
+##################################
+*/
+
+.layout {
+  min-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1c1b1b;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  padding-right: 6rem;
+  padding-left: 6rem;
+  border-radius: 10px;
+}
+#welcome {
+  color: white;
+  font-family: "Exo 2";
+  font-style: italic;
+  font-size: 5rem;
+  border-bottom: 1px solid gray;
+  display: inline;
+  padding-bottom: 1rem;
+  width: auto;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#rule-btn,
+#start-btn {
+  background-color: #1c1b1b;
+  color: white;
+  width: 300px;
+  padding: 20px 0px;
+  border-radius: 5px;
+  font-size: 35px;
+  border: 1px solid grey;
+  font-family: "Quicksand";
+  cursor: pointer;
+  transition: 0.4s;
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+#start-btn {
+  background-color: #fff;
+  color: #000;
+}
+
+#rule-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+#start-btn:hover {
+  background-color: #1c1b1b;
+  color: #fff;
+}
+/* 
+##################################
+
+      Rule page styling 
+
+##################################
+*/
+.main-section {
+  /* background-color: red; */
+
+  background-color: #1c1b1b;
+  width: 900px;
+  height: auto;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.main-section h1 {
+  margin: 50px 0px;
+  color: white;
+  text-align: center;
+  font-family: "Exo 2";
+  min-width: 720px;
+  font-style: italic;
+}
+.main-section li {
+  color: white;
+  list-style: none;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Lato";
+  text-align: justify;
+  min-width: 720px;
+  margin-bottom: 2rem;
+}
+.main-section li::before {
+  content: "+ ";
+  color: yellow;
+  font-size: 30px;
+}
