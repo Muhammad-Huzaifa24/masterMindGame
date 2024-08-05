@@ -7,6 +7,15 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- google fonts link -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body
@@ -17,11 +26,11 @@
       justify-content: center;
       position: relative;
       max-width: 1390px;
-      min-width: 640px;
+      min-width: 900px;
       margin: 0 auto;
     "
   >
-    <div style="display: flex; justify-content: center; flex-wrap: wrap">
+    <div style="display: flex; justify-content: center">
       <a class="back-btn" href="./index.html">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -45,47 +54,84 @@
         </div>
         <div class="button" id="checkButton">Check</div>
       </div>
-      <div class="color-palette">
-        <div
-          class="colors"
-          style="background-color: red"
-          data-color="red"
-        ></div>
-        <div
-          class="colors"
-          style="background-color: green"
-          data-color="green"
-        ></div>
-        <div
-          class="colors"
-          style="background-color: blue"
-          data-color="blue"
-        ></div>
-        <div
-          class="colors"
-          style="background-color: orange"
-          data-color="orange"
-        ></div>
-        <div
-          class="colors"
-          style="background-color: cyan"
-          data-color="cyan"
-        ></div>
-        <div
-          class="colors"
-          style="background-color: purple"
-          data-color="purple"
-        ></div>
-        <div
-          class="colors"
-          style="background-color: brown"
-          data-color="brown"
-        ></div>
-        <div
-          class="colors"
-          style="background-color: white"
-          data-color="white"
-        ></div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 20px;
+        "
+      >
+        <div class="color-palette">
+          <div
+            class="colors"
+            style="background-color: red"
+            data-color="red"
+          ></div>
+          <div
+            class="colors"
+            style="background-color: green"
+            data-color="green"
+          ></div>
+          <div
+            class="colors"
+            style="background-color: blue"
+            data-color="blue"
+          ></div>
+          <div
+            class="colors"
+            style="background-color: orange"
+            data-color="orange"
+          ></div>
+          <div
+            class="colors"
+            style="background-color: cyan"
+            data-color="cyan"
+          ></div>
+          <div
+            class="colors"
+            style="background-color: purple"
+            data-color="purple"
+          ></div>
+          <div
+            class="colors"
+            style="background-color: brown"
+            data-color="brown"
+          ></div>
+          <div
+            class="colors"
+            style="background-color: white"
+            data-color="white"
+          ></div>
+        </div>
+
+        <button id="new-game" class="new-game">New Game</button>
+      </div>
+    </div>
+
+    <!-- Modal for duplicate color option -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h2>Allow Duplicate Colors?</h2>
+        <button class="yes" id="yesButton">Yes</button>
+        <button class="no" id="noButton">No</button>
+      </div>
+    </div>
+
+    <!-- Modal for winning the game -->
+    <div id="winModal" class="modal">
+      <div class="modal-content">
+        <p>Congratulations! You've cracked the code!</p>
+        <button class="playAgain" id="playAgainButton">Play Again</button>
+        <button class="goHome" id="returnHomeButton">Return to Home</button>
+      </div>
+    </div>
+
+    <!-- Alert Modal -->
+    <div id="alertModal" class="modal">
+      <div class="modal-content">
+        <p id="alertMessage"></p>
+        <button id="alertOkButton">OK</button>
       </div>
     </div>
 
