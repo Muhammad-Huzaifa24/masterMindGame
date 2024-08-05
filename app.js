@@ -62,6 +62,44 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Create dynamic rows using DOM manipulation in reverse order
+  // function createRows() {
+  //   for (let i = 0; i < totalRows; i++) {
+  //     let subContainer = document.createElement("div");
+  //     subContainer.classList.add("sub-container");
+
+  //     let leftDiv = document.createElement("div");
+  //     leftDiv.setAttribute("class", "left");
+
+  //     for (let j = 0; j < 4; j++) {
+  //       let circle = document.createElement("div");
+  //       circle.classList.add("circle-l");
+  //       if (i !== currentRow) {
+  //         circle.classList.add("disabled");
+  //       } else {
+  //         circle.classList.add("active");
+  //       }
+  //       leftDiv.append(circle);
+  //     }
+
+  //     let rightDiv = document.createElement("div");
+  //     rightDiv.setAttribute("class", "right");
+
+  //     for (let j = 0; j < 4; j++) {
+  //       let circle = document.createElement("div");
+  //       circle.classList.add("circle-r");
+  //       rightDiv.append(circle);
+  //     }
+
+  //     subContainer.append(leftDiv);
+  //     subContainer.append(rightDiv);
+  //     container.append(subContainer);
+  //   }
+  // }
+
+  // update rows
+  // active row means white border circle
+  // disabled row means yellow border
+
   function createRows() {
     for (let i = 0; i < totalRows; i++) {
       let subContainer = document.createElement("div");
@@ -96,9 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // update rows
-  // active row means white border circle
-  // disabled row means yellow border
   function updateRowAccess() {
     const rows = document.querySelectorAll(".left .circle-l");
     rows.forEach((circle, index) => {
