@@ -201,6 +201,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // container.addEventListener("click", (event) => {
+  //   const target = event.target;
+  //   if (
+  //     target.classList.contains("circle-l") &&
+  //     !target.classList.contains("disabled")
+  //   ) {
+  //     if (selectedColor) {
+  //       if (!allowDuplicates) {
+  //         const currentRowCircles =
+  //           document.querySelectorAll(".left")[currentRow].children;
+  //         const existingColors = Array.from(currentRowCircles)
+  //           .map((circle) => circle.style.backgroundColor)
+  //           .filter((color) => color); // Filter out empty colors
+
+  //         if (existingColors.includes(selectedColor)) {
+  //           alert(
+  //             "You cannot use the same color more than once in a single row."
+  //           );
+  //           return;
+  //         }
+  //       }
+  //       target.style.backgroundColor = selectedColor;
+  //     }
+  //   } else if (target.classList.contains("disabled")) {
+  //     alert("You cannot select a circle in a non-active row.");
+  //   }
+  // });
+
   container.addEventListener("click", (event) => {
     const target = event.target;
     if (
@@ -208,19 +236,26 @@ document.addEventListener("DOMContentLoaded", () => {
       !target.classList.contains("disabled")
     ) {
       if (selectedColor) {
-        if (!allowDuplicates) {
-          const currentRowCircles =
-            document.querySelectorAll(".left")[currentRow].children;
-          const existingColors = Array.from(currentRowCircles)
-            .map((circle) => circle.style.backgroundColor)
-            .filter((color) => color); // Filter out empty colors
+        const currentRowCircles =
+          document.querySelectorAll(".left")[currentRow].children;
+        const existingColors = Array.from(currentRowCircles)
+          .map((circle) => circle.style.backgroundColor)
+          .filter((color) => color); // Filter out empty colors
 
-          if (existingColors.includes(selectedColor)) {
-            alert(
-              "You cannot use the same color more than once in a single row."
-            );
-            return;
-          }
+        const colorCount = existingColors.filter(
+          (color) => color === selectedColor
+        ).length;
+
+        if (!allowDuplicates && existingColors.includes(selectedColor)) {
+          alert(
+            "You cannot use the same color more than once in a single row."
+          );
+          return;
+        } else if (allowDuplicates && colorCount >= 2) {
+          alert(
+            "You cannot use the same color more than twice in a single row."
+          );
+          return;
         }
         target.style.backgroundColor = selectedColor;
       }
